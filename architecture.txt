@@ -1,0 +1,63 @@
+phrases:
+
+1) app for networking (make sure to fill on_stop in App block)
+
+ . set database_index:
+		see database is not empty (1 for yes and 0 for no)
+ . set net_index:
+		see whether the net is on (1 for yes and 0 for no)
+ . when database_index is 1:(for every x secounds this should be done):
+		when net_index is 1:(run set net_index)
+			make the database to one string
+			update to the firebase(all the database as a timeofupload + complete_string should be updated)-(in idno)
+			delete the complete database
+			database_index to 0
+ . when net_index=1 and button has pressed:
+		should get update to the firebase :-(in idno)
+			date-time-value-prevoiusdate-presentdate-(mod(6month or simple))-intrest_rate
+ . when net_index=0 and button has pressed:
+		should update in to local database
+			date-time-value-prevoiusdate-presentdate-(mod(6month or simple))-intrest_rate
+
+2) app for security (making sure that the app is not shareble(because of idno) and term_deciadble):
+ . set term_index:
+	see today date is less than fixed date (1 for yes and 0 for no)
+ . see term_index is 0:
+		if net_index is 1:
+			place a popup ((checking ..,please_wait ..,),non_removable)
+			take extended date from firebase(in date)
+			if extended date is greater than fixed date:
+				put fixed_date as extended date
+				term_index to 1
+			if extended date is not greater than fixed date:
+				screen with please contact datta
+		if net_index is 0:
+			place a popup ((please on net),(button -refresh),non_removable)
+			refresh button is pressed:
+				if net_index is 1:
+					shutdown popup
+					go to first case popup
+ . see whether the idno database is filled or not:
+		if not filled fill with android id
+
+3) app for use :
+	. app should use to give output for user
+	. app should use to complete records to user
+	. app should use to give the gold prices to user
+
+4) interface:(for all the above 3 purposes (input taking and output giving))
+
+
+
+care taking:
+
+ . app should not be slow
+ 
+
+temp_app:
+
+ . app to check whether the modules are working or not ()
+				
+			
+			
+ 
